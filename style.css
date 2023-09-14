@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: #363636;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.logotipo {
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.logotipo:hover {
+    opacity: .5;
+    rotate: -10deg;
+    transition: 0.7s;
+}
+
+.input_quantity {
+    color: #AEC346;
+
+    padding: 10px 0 10px 27px;
+    width: 90px;
+    height: 60px;
+    margin: 15px 0 30px; 
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 30px;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.container_inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    margin: 15px 0 50px;
+}
+
+.input_min, .input_max {
+    display: flex;
+    width: 342px;
+    padding: 15px 16px;
+    align-items: center;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.25);
+
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+    padding: 30px 60px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background: #AEC346;
+    box-shadow: 0px 18px 40px 0px rgba(174, 195, 70, 0.35);
+
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 2.5px;
+}
+
+button:hover {
+    opacity: .5;
+}
+
+button:active {
+    opacity: .8;
+}
+
+@media screen and (max-width: 1366px) {
+
+    .logotipo {
+        width: 150px;
+        top: 40px;
+        left: 90px;
+    }
+    
+    .imgDado {
+        width: 350px;
+    }
+
+    .input_quantity {
+        margin: 5px 0 30px; 
+    }
+    
+    .container {
+        margin-top: 20px;
+    }
+
+    .container_inputs {
+        gap: 60px;
+        margin: 15px 0 30px;
+    }
+    
+    .input_min, .input_max {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .logotipo {
+        width: 100px;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .imgDado {
+        width: 300px;
+    }
+
+    .container {
+        margin-top: 10px;
+    }
+    
+    .container_inputs {
+        flex-direction: column;
+        gap: 30px;
+        margin: 15px 0 30px;
+    }
+    
+    .input_min, .input_max  {
+        width: 290px;
+    }
+}
