@@ -6,14 +6,17 @@ const sortNumber = () => {
     const quantity = document.querySelector(".input_quantity").value
 
     const Arr = []
-
-    for (var i = 0; i < quantity; i++) {
-
-        const result = Math.floor(Math.random() * (max - min + 1)) + min;
     
-         Arr.push(result)
-     }
-        alert(Arr)
-    }
+    if(min >= max) {
+        alert("Número mínimo não pode ser maior ou igual ao máximo")
+    } else {
+        for (var i = 0; i < quantity; i++) {
 
+            const result = Math.floor(Math.random() * (max - min + 1)) + min;
+        
+            Arr.push(result)
+        }
+            alert(Arr)
+        }
+    }
 button.addEventListener('click', sortNumber)
