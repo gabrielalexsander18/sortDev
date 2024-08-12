@@ -16,17 +16,21 @@ body {
     height: 100vh;
 }
 
-.logotipo {
-    width: 200px;
+#logotipo {
+    width: 11rem;
     position: absolute;
     top: 50px;
-    left: 100px;
+    left: 5rem;
 }
 
-.logotipo:hover {
+#logotipo:hover {
     opacity: .5;
     rotate: -10deg;
     transition: 0.7s;
+}
+
+#imgDado {
+    width: 23rem;
 }
 
 .input_quantity {
@@ -66,7 +70,6 @@ p {
 
 .input_min, .input_max {
     display: flex;
-    width: 342px;
     padding: 15px 16px;
     align-items: center;
 
@@ -82,8 +85,6 @@ p {
 button {
     cursor: pointer;
     padding: 30px 60px;
-    justify-content: center;
-    align-items: center;
 
     border-radius: 10px;
     background: #AEC346;
@@ -102,6 +103,78 @@ button:hover {
 
 button:active {
     opacity: .8;
+}
+
+#container_opacity {
+    display: none;
+    position: absolute;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+#container_result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: rgba(119,136,159, .8);
+    border: .5px solid rgba(119,136,153, 1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#resultadoNome, #resultadoNumero {
+    font-size: 60px;
+}
+
+#resultadoNumero {
+    margin-bottom: 25px;
+}
+
+#button_return {
+    padding: 20px 40px;
+
+    background: #696969;
+    box-shadow: 0px 18px 40px 0px rgba(169,169,169, 0.35);
+
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 2.5px;
+}
+
+#container_loader {
+    position: absolute;
+    backdrop-filter: blur(7px);
+    width: 100vw;
+    height: 100vh;
+    display: none;  /* Escondido inicialmente */
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid rgba(119,136,159, 1);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 1366px) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
+    <meta name="author" content="Gabriel Abreu">
     <link rel="stylesheet" href="./style.css">
     <title>Sorteador</title>
 </head>
 <body>
-    <img class="logotipo" src="./assets/logo-portfolio.png" alt="logotipo" />
-    <img class="imgDado" src="./assets/sort.png" alt="img-dado" />
+    <img id="logotipo" src="./assets/logo-portfolio.png" alt="logotipo" />
+    <img id="imgDado" src="./assets/sort.png" alt="img-dado" />
 
     
     <div class="container">
@@ -23,9 +24,19 @@
             <input class="input_min" type="number" placeholder="min">
             <input class="input_max" type="number" placeholder="max">
         </div>
-        <button class="sort" >Sortear</button>
+        <button class="sort">Sortear</button>
     </div>
     
+    <div id="container_loader">
+        <div id="loader"></div>
+    </div>
+
+    <div id="container_opacity">
+        <div id="container_result">
+            <p id="resultadoNumero"></p>
+            <button id="button_return">Voltar</button>
+        </div>
+    </div>
 </body>
 
 <script src="./index.js"></script>
